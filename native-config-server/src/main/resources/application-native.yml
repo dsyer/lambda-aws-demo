@@ -1,7 +1,7 @@
 #debug: true
 
 server:
-  port: ${PORT}
+  port: ${PORT:8080}
 
 #management:
 #  endpoints:
@@ -14,4 +14,4 @@ spring:
       server:
         # Use the File System Backend to avoid git pulling. Enable "native" profile in the Config Server.
         native:
-          searchLocations: file:///${GIT_REPO}
+          searchLocations: file://${GIT_REPO:.}
